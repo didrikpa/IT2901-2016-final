@@ -1,0 +1,71 @@
+\section{Tests for ``Elements"}
+\begin{table}[!h]
+\caption{ToE01:Enter the application}
+\begin{tabular}{ |p{7cm}|p{7cm}| }
+\hline
+\textbf {Test ID} & {ToE01} \\ \hline
+\textbf {Module} & {Table of elements} \\ \hline
+\textbf {Requirement} & {When entering the game from the ``overview"-view the user should be provided a short story about the task, some information about how to win the game. The user should also be given the choice to continue into the game, or leave it} \\ \hline
+\textbf {Precondition} & {The user is in the overview-view} \\ \hline
+\textbf {Approach} & {\begin{itemize}
+    \item Select the ToE game from overview.
+    \item If a popup appears, review the information given.
+    \item Select the ``cancel" option
+    \item If returned to overview - select ToE again
+    \item Select the ``start" option
+\end{itemize}} \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\caption{ToE02:Select an element}
+\begin{tabular}{ |p{7cm}|p{7cm}| }
+\hline
+\textbf {Test ID} & {ToE02} \\ \hline
+\textbf {Module} & {Table of elements} \\ \hline
+\textbf {Requirement} & {When selecting an element, the user will get feedback regarding the correctness of the answer, and some relevant facts about the selected element. The popup should also contain a ``next element" button} \\ \hline
+\textbf {Precondition} & {The user has entered the minigame} \\ \hline
+\textbf {Approach} & {\begin{itemize}
+    \item Select an element when it is incorrect.
+    \item Press next element.
+    \item Repeat for every element available.
+    \item Select an element when it is correct.
+    \item Press next element.
+    \item Repeat for every element available.
+\end{itemize}} \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\caption{ToE03:Recurring elements}
+\begin{tabular}{ |p{7cm}|p{7cm}| }
+\hline
+\textbf {Test ID} & {ToE03} \\ \hline
+\textbf {Module} & {Table of elements} \\ \hline
+\textbf {Requirement} & {If the selected element is correct, it should not reappear in the game, but if an element is incorrect, it should be put back in the stack, and reappear when a user has been through all the elements.} \\ \hline
+\textbf {Precondition} & {The user has entered the minigame} \\ \hline
+\textbf {Approach} & {\begin{itemize}
+    \item Select an element that is correct.
+    \item Select the wrong element until the player are at the place in the sequence where the correct element should have been.
+    \item If the correct element is gone, and all the incorrect ones are reappearing, the minigame has passed the test.
+\end{itemize}} \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!h]
+\caption{ToE04: Win the game}
+\begin{tabular}{ |p{7cm}|p{7cm}| }
+\hline
+\textbf {Test ID} & {ToE04} \\ \hline
+\textbf {Module} & {Table of elements} \\ \hline
+\textbf {Requirement} & {If the user has selected all the correct elements to the corresponding pictures, the user should see a popup with information that they have won. The popup should have a button witch takes the user to the reward screen, where the user receives their robot part.} \\ \hline
+\textbf {Precondition} & {The user has entered the minigame} \\ \hline
+\textbf {Approach} & {\begin{itemize}
+    \item Select all the correct elements.
+    \item A popup should appear that gives the user the opportunity to go collect his new part.
+    \item When the button is pressed the user should be sent to the reward screen.
+    \item When the user presses the ``accept part" button the should be sent to the ``my robot" view.
+    \item If the corresponding robot part has appeared, the test has been passed.
+\end{itemize}} \\ \hline
+\end{tabular}
+\end{table}

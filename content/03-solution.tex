@@ -1,0 +1,65 @@
+\chapter{Solution}
+After the brainstorming session, the team had to choose between several ideas for the application presented in the prestudy chapter. The team made several considerations about what ideas and features that should be included in the solution. This chapter is about explaining the reasoning behind the choices and the solution of the project.
+
+\section{Considerations}
+In considering the ideas for the application, certain realities about competence and estimation of workload and time limitations had to be addressed. In this section, the rationale behind the choices that was made will be presented. 
+
+\subsection{Augmented and virtual reality}
+Developing with augmented reality and virtual reality requires knowledge about 3D modelling and programming in a 3D environment. It was agreed that the members of the team did not have enough knowledge or experience to make a decent application in this field. It was also questionable whether Vitensenteret would provide the equipment that would be needed for this sort of development. The idea of developing in a 3D environment were dropped.
+
+\subsection{Beacons}
+Beacons technology could be used to let the application know where the user is in the museum. For instance, if there were one beacon in each room, the app could be programmed to differentiate its the behaviour based on which beacon that sends signals to the phone. Both Vitensenteret and the team agreed that using beacon technology would add an interesting aspect to the app. Additionally it could be used as a unique way to activate certain elements of the museum that Vitensenteret were enthusiastic about. \\
+\\
+In order to use beacons, the group had to get hold of some beacon hardware. One of the group members had a contact in Nordic, and asked if it was possible to get some hardware for testing purposes.\textbf{ Skal fylle ut mer her. }
+
+\subsection{Guide through the exhibition}
+A guide through the exhibition was one of the ideas that seemed possible to develop within the time-frame of the semester. A guide through the museum would consist of a story, and some sources of inspiration that would help the user to experience the museum. The app could for instance provide some inspiring facts to the user about certain objects in the museum with the intention of "activating" parts of the museum. Activating parts of the museum means incentivizing the user to complete the tour, read some of the literature, or play with some of the interactive objects in the museum. 
+
+\subsection{Minigames}
+The idea that was chosen for the project was developing an app consisting of 7 minigames. It is similar to the idea of making a guide through the museum in that the goal is to activate certain elements within the museum. Since the target-group is children between the ages of 6-10 years old, creating an interactive application rather than an a guide seemed more appropriate as the team thought that children tend to do focus on interactivity and learning by doing. \\
+\\
+From the teams perspective, dividing the labour would be much easier if the goal was making several minigames than if it was making a single guide throughout the museum. It was also agreed upon that it would be simple to keep track of the development process and estimate the remaining work, as well as having some new functionality for every other week to present to the customer in the case of using Scrum as a development method. 
+
+\section{The application}
+This section contains more detailed information and reasoning about the solution that was chosen, including the different minigames and views available to the user.
+
+\subsection{Idea}
+Before deciding upon which minigames and features that should be included in the app, the team considered an underlying theme and story that would make the app more friendly towards children. In collaboration with Vitensenteret, the team decided that the story should be about  Rob and Otto and their desire to build their new robot friend. Rob and Otto are both robots and have gathered some robot-parts for their robot, but some bad guys have stolen them. The user is presented with this dilemma, and is encouraged to solve the different minigames and retrieve the lost parts to build Rob and Otto's new friend.
+
+\subsection{Rewards}
+In order to motivate the user to complete the game,  a reward system was planned for the application. Upon finishing a game, it was decided that the user should receive an instant reward in the form of a robot-part. When all the games would be completed the robot would also be complete. 
+
+\subsection{Overview screen}
+It was first planned that walking into the different rooms in the museum would trigger the corresponding minigame to start on the app. This should be achieved using beacon technology. However, for users that aren't using Bluetooth, having an overview screen would provide certain features that the team deemed necessary for the application to be preferable to the user. The intention of making an overview screen was to provide the user with an overview of the progress of the game, and a selection screen where the user could select what the game the user wanted to play. The other option would be having the games be played sequentially, with each game being played in a certain order. In this museum, the one can change rooms in whatever order one would want to, so it was desirable that the minigames aiming to activate certain parts of the museum could be played in the order that the user wanted.
+
+\subsection{Map screen}
+The intention of the map screen was to make Vitensenteret's map more available and to let the user know where the user is in the museum by using beacon technology, as well as informing the user about what rooms that remains to be visited using some sort of highlighting. 
+
+\subsection{Robot customization screen}
+The idea of having a screen with all the currently gathered robot parts originated from the reward system. To gain a robot part would not be as satisfiable if you weren't able to view them together. To increase the motivation for gathering robot parts, the team decided that the user should be able to customize the robot by having a selection of part to chose from, like for example 4 different skins for the head. It was later decided that the user should be able to adjust the color of the individual parts as well, using sliders.
+
+\subsection{Quiz}
+By walking around in the museum, one would stumble upon some notes hanging on the different walls. On each of these notes there is a question. To view the answer of a question, the visitor has to lift the note up, and the answer is written on the wall. In order to activate these notes via the app, the team decided to include a quiz as one of the minigames. On the quiz, some of exact same questions are displayed, and the user is incentiviced to find the notes in the museum and the attached answer.
+
+\subsection{Pipes}
+The pipes game was intended to fit the theme of a room in Vitensenteret about the science of water and hydraulic power technology. The plan for the game was to have a grid with randomly turned pipes, a water-source and a turbine. To complete the game, the user would have to turn the tubes such that the tubes connect the water-source and the turbine. It was debated whether the tube-grid should be made using fixed tube-locations or by being generated using an algorithm. Because of simplicity and time restrictions, the team decided to use fixed locations for the different types of tubes. It was later decided that there should be three levels, were the user receives the reward after completing all of them. This was to extend the duration of a rather simple game, and to have the difficulty increase with each level.
+
+\subsection{Simon says}
+The Simon says game was a response to a room in the museum dedicated to the human body. This room contains, among other items, an interactive item for measuring reaction time, and a plastic version of the human body where one can reassemble the stomach. The team found that it would be a good idea to have a memory game because it was fitting to the theme and the purpose of this room. Ideally, the game would have some sort memory test in which the user had to remember the order of an occurrence, and repeat it into the app. It was decided that the memory game should have 3 levels, with each level getting slightly harder. That aside, it was important that the levels would not get too hard for children. 
+
+\subsection{Elements}
+Vitensenteret has a big shelf displaying the table of elements. Each of the elements has its on space, where a picture or an actual piece of material is displayed inside a little box with the front side protected by a layer of glass. The elements-game was intended to activate this part of the museum by providing incentives to read the descriptions and look at the items at this shelf. The plan for the game was to have a picture of an element or an item, and have the user choose the corresponding element that the item mostly consists of. It was decided that there should be nine fixed alternatives that sticks to the screen, with a new item appearing on top of the screen after the user answers a question. If the user would answer wrong, the next item would appear as normal, but the item that was answered wrong would be placed in the back of the queue. The user would ultimately have to answer all the questions right to finish the game.
+
+\subsection{Color lock}
+In the museum there is a room dedicated to colors, lights, and mirrors. One of the interactive items in the room is about making a color based on three sliders that resembles mixing red green and blue to make a certain color. The color lock game was supposed to take this a step further by adding additional levels and confirmation when the user would get the answer right. The idea was that the user should be presented with a color that he/she has to create using three sliders. After getting creating the correct color by a reasonable margin, the user would have the option to "Unlock" and progress to the next level, hence the name the game - color lock.
+
+\subsection{Shortest-path}
+Vitensenteret has a room containing several puzzles, one of which is a shortest-path problem. This puzzle is about finding a path between 10 different cities in Europe in an order that minimizes the length of the path to the minimum, but the puzzle gives no signals on whether the user got the path wrong or right. The shortest-path minigame was meant to help the user confirm that his answer was right; the puzzle exists in the museum, but the answers are filled into the app.
+
+\subsection{Melody game}
+One of the rooms in Vitensenteret contains a couple of pipes that makes a certain sound when a thing spins and hits them in the order that they are placed in around a circular shape. It is the visitors task to order these pipes such that they make sounds in correct order. (Challenge needs to be explained properly). The team decided to make a minigame that gives the user a sound pattern that has to be recreated with these tubes (No idea if this is correct). (this subsection lacks proper reasoning and is probably incorrect, i dont know)
+
+\TODO{
+Kan noen skrive om dette? har ingen anelse om hvordan dette spillet fungerer lol
+Formatet som er brukt så langt er å presentere rommet eller noe i vitensenteret, så presentere målet med spillet (aktivere denne delen av museumet og hvordan/hvorfor), så presentere hvordan spillet var planlagt/hva det skulle gjøre. Det er greit å skrive endringer i planen som for eksempel i pipes avsnittet ovenfor. eks: "It was later decided that the game should..."
+}

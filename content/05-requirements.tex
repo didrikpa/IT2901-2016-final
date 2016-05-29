@@ -1,0 +1,143 @@
+\chapter{Requirements}
+
+This chapter explains what functional and non-functional requirements are, as well as describing some of the requirements for the application.\\
+\\
+
+
+
+\section{functional requirements}
+The functional requirements describes how the application should behave, as well as the operations and activities the system should be able to perform. They often detail what the output of an action should be, given the input \cite{OFNIS}. As previously mentioned, Vitensenteret did not have a lot of requirements for the application. This meant the group had to develop them. When the group had decided what the application should be and contain, requirements were made to cover most aspects of the functionality.\\
+\\
+Some of the functional requirements for the application are mentioned in Table \ref{ref:func_req}. A more detailed description of these, as well as an example of extensive functional requirements for the minigames, can be found in Appendix \ref{appendix:func_req}
+
+\begin{table}[H]\label{ref:func_req}
+\caption{ToE02:Select an element}
+\begin{tabular}{ |p{7cm}|p{7cm}| }
+\hline
+\textbf {Name of requirement} & {Description of requirement} \\ \hline
+\textbf {Hints in minigames} & {The minigames should provide the user with relevant feedback and hints when necessary.} \\ \hline
+\textbf {Quiz} & {The application should have a quiz} \\ \hline
+\textbf {Color lock minigame} & {The application should have a color lock minigame} \\ \hline
+\textbf {Shortest path minigame} & {The application should have a shortest path minigame that corresponds to the traveling salesman problem in the exhibition.} \\ \hline
+\textbf {Elements minigame} & {There should be a minigame that makes the user engage with the table of elements in the exhibition.}\\\hline
+\textbf{Pipes minigame}&{The application should have a minigame that illustrate pipes in a watersystem.}\\\hline
+\textbf{Simon says minigame}&{The application should have a minigame that tests the users cognitive skills, by making the user repeat a pattern.}\\\hline
+\textbf{Language}&{The user should be given the opportunity to select between Norwegian and English.}\\\hline
+\textbf{Map}&{There should be a map available with the location of where in the exhibition the different minigames should be completed}\\\hline
+\textbf{Collect robot parts}&{Whenever a minigame is completed, the user should be rewarded with a new robot part until the robot is completed.}\\\hline
+\textbf{Edit robot parts}&{The user should be able to edit their robot. Both the combination of different parts and their colors.}\\\hline
+\end{tabular}
+\end{table}
+
+\section{Non-functional requirements}
+Non functional requirements describe the systems attributes, such as security, scalability and maintainability. They can also describe restraints, restrictions, and architectural requirements\cite{reqtest}.
+
+Because the application was developed to be stored on the device without access to personal information there were no special security measures. Because the beacons only send signals to bluetooth devices, and are unable to receive signals from other devices, they were not concidered a point of threat to the security.
+
+Appendix \ref{appendix:non-func_req} contains the non-functional requirements for the application.
+
+\section{Changes to requirements}
+
+Throughout the project some of the functional requirements had to be changed. Following is a description of the changed requirements, and what they were changed from.\\
+\\
+The functional requirement "Map"(Table \ref{map_req}) was originally stated: "The application should have a map that shows which rooms are finished, and which are not.", but was changed to only contain the locations of the different minigames. This was changed because the group realized that the time spent implementing this could be better spent elsewhere. A simple map with the locations of the minigames would be sufficient information for the user.\\
+\\
+The application originally had a functional requirement called "Change elements in minigames",which was formulated as follows: "The owner of the application should have the possibility to change elements of some of the minigames". This was a requirement that was formulated when the group asked Vitensenteret if they wanted the possibility to change the questions in the quiz after the application had been published. The group later decided, in collaboration with Vitensenteret, that this was not necessary. Implementing this functionality would require a database with a custom interface. It would also require the user to be connected to the Internet in order to get the correct quiz questions on their phone. This would require a lot of time to implement, which the group did not have.
+
+
+
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{images/hints.png}
+    \caption{Use case 1 - use case for obtaining a hint in a minigame}
+    \label{fig:use case 1}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{images/minigames.png}
+    \caption{Use case 2 - Use case for playing a minigame}
+    \label{fig:use case 2}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[scale=0.5]{images/mapFunction.png}
+    \caption{Use case 3 - Use case for using the map function}
+    \label{fig:use case 3}
+\end{figure}
+
+
+\begin{comment}
+Alle figurene kan refereres til ved å bruke label: \ref{fig: xxx}. Eks: "As you ‰ can see in the figure \ref{fig:MVC}, The MVC...()"
+\end{comment}
+
+
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+ID               & 3                                                                                                                                                                                                                                                                 \\ \hline
+Name             & Overview Screen                                                                                                                                                                                                                                                   \\ \hline
+Goal             & User selects game and selected game is started                                                                                                                                                                                                                    \\ \hline
+Actors           & User                                                                                                                                                                                                                                                              \\ \hline
+Preconditions    & Overview screen is displayed                                                                                                                                                                                                                                      \\ \hline
+Prerequisite     & Game is installed and started                                                                                                                                                                                                                                     \\ \hline
+Main Flow        & \begin{tabular}[c]{@{}l@{}}1. User selects desired game from the list of games with touch.\\ 2. System prompts user with story and options to start or cancel\\ 3. User presses start.\\ 4. System changes to game view and controller.\end{tabular}              \\ \hline
+Alternative Flow & \begin{tabular}[c]{@{}l@{}}1. User selects desired game from the list of games with touch.\\ 2. System prompts user with story and options to start or cancel\\ 3. User presses cancel.\\ 4. System exits the prompt and returns to overview screen.\end{tabular} \\ \hline
+Parent UC        & Welcoming screen                                                                                                                                                                                                                                                  \\ \hline
+Child UC         & All minigames.                                                                                                                                                                                                                                                    \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+ID               & 1                                                                                                                        \\ \hline
+Name             & Choose language screen                                                                                                   \\ \hline
+Goal             & User selects language and proceeds to welcoming screen                                                                   \\ \hline
+Actors           & User                                                                                                                     \\ \hline
+Preconditions    & User starts game for first time or user deletes his robot.                                                               \\ \hline
+Prerequisite     & Game is installed and running                                                                                            \\ \hline
+Main Flow        & \begin{tabular}[c]{@{}l@{}}1. User presses on the desired language.\\ 2. System changes to welcoming screen\end{tabular} \\ \hline
+Alternative Flow & None                                                                                                                     \\ \hline
+Parent UC        & None                                                                                                                     \\ \hline
+Child UC         & Welcoming Screen                                                                                                         \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[]
+\centering
+\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|l|}
+\hline
+ID               & 2                                                                                                                                                                                                                                                \\ \hline
+Name             & Welcoming screen                                                                                                                                                                                                                                 \\ \hline
+Goal             & User receives welcoming and proceeds to overview screen                                                                                                                                                                                          \\ \hline
+Actors           & User                                                                                                                                                                                                                                             \\ \hline
+Preconditions    & Welcoming screen is on display                                                                                                                                                                                                                   \\ \hline
+Prerequisite     & Game is installed and running                                                                                                                                                                                                                    \\ \hline
+Main Flow        & \begin{tabular}[c]{@{}l@{}}1. User presses anywhere on the screen.\\ 2. Message appears on screen with alternatives to proceed or cancel\\ 3. User choses to proceed.\\ 4. System changes display and controller to overview screen\end{tabular} \\ \hline
+Alternative Flow & \begin{tabular}[c]{@{}l@{}}1. User presses anywhere on the screen.\\ 2. Message appears on screen with alternatives to proceed or cancel\\ 3. User chooses to cancel.\\ 4. Message dissapears and welcoming screen is displayed\end{tabular}     \\ \hline
+Parent UC        & Choose language screen                                                                                                                                                                                                                           \\ \hline
+Child UC         & Overview screen                                                                                                                                                                                                                                  \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+
+
+
+

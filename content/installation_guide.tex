@@ -1,0 +1,43 @@
+
+\section{Android installation}
+This guide will show how one can install the Vitensenteret application on a android device.
+
+\subsection{Prerequisites}
+\begin{itemize}
+    \item A phone with Android 4.4 (KitKat) or newer.
+    \item The APK file from our project.
+\end{itemize}
+
+When building the application from source:
+\begin{itemize}
+    \item Node.js installed
+    \item Android SDK manager installed.
+\end{itemize}
+
+
+
+\subsection{Building the application from source}
+Note: This step is not necessary; one can install the application from the pre-built APK.
+\begin{enumerate}
+    \item Download Android SDK 19 from the Android SDK Manager.
+    \item In the project's root folder run ``npm install .", which will install all dependencies.
+    \item Run ``ionic serve" to check that ionic and the project is properly installed, as well as compiling some necesary files. A browser window should open with the application running.
+    \item Run ``ionic platform add android" to add android as a build platform.
+    \item Now one can either build an APK file, or install/run the application directly on ones device. To build the app run ``ionic build android". To run the application on ones device connect the phone in developer mode and run ``ionic run android".
+    \item One should now have either the APK placed in ``platforms/android/ant-build/CordovaApp-debug.apk" or running on ones phone.
+\end{enumerate}
+
+
+\subsection{Preparations}
+To install an app from outside the Play Store one has to enable installation from unknown sources on the android device. This is done by going into Settings, then under Security enable ``Unknown Sources".
+\\
+\\
+One also needs the APK file to be on the android device. This is most easily done by downloading it from the internet, by sending it to yourself or something similar. It can also be done by connecting the device to a computer and transfering the APK to the Downloads folder after enabling file transfer mode on the android device.
+
+\subsection{Installation}
+To install the app, open either the ``Downloads" app or another file browser, find, and open the APK file that should be there.\\
+Install the app, and open it.\\
+If all went well one should now have the application running on the device.
+\subsection{Troubleshooting}
+If the app won't install, make sure your android device is version 4.4 or above, which can be checked in Settings, About, then Android Version. Also make sure Unknown Sources is enabled and that the APK was not corrupted during the transfer to the device.\\\\
+If one does not have a Android device with version 4.4 or higher one can use a Android emulator to test the app. See  http://developer.android.com/tools/devices/emulator.html
